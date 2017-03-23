@@ -17,10 +17,18 @@ public class CountriesCode {
     @Expose
     private LinkedHashMap<String, String> countryFlagCodes;
 
+    /**
+     *  Get CountryFlag codes
+     */
     public LinkedHashMap<String, String> getCountryFlagCodes() {
         return countryFlagCodes;
     }
 
+    /**
+     * Set CountryFlag codes that are read from countriesFlag.json file under assets directory
+     *
+     * @param countryFlagCodes List containing Country Flag codes
+     */
     public void setCountryFlagCodes(LinkedHashMap<String, String> countryFlagCodes) {
         this.countryFlagCodes = countryFlagCodes;
     }

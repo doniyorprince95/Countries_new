@@ -28,6 +28,7 @@ public class CountryDetailsRecyclerViewAdapter extends RecyclerView.Adapter<Coun
     private List<HashMap<String, Object>> mCountryDetailDataList;
 
     /**
+     * {@link CountryDetailsRecyclerViewAdapter} constructor
      *
      * @param context context Application/Activity Context
      * @param data This object contains specific details about the user selected country

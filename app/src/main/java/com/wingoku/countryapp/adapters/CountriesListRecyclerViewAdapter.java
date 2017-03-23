@@ -34,7 +34,7 @@ public class CountriesListRecyclerViewAdapter extends RecyclerView.Adapter<Count
     private List<String> mCountriesNameList;
 
     /**
-     *
+     * {@link CountriesListRecyclerViewAdapter} constructor
      * @param context Application/Activity Context
      * @param countriesNameList List of all the countries in /assets/countriesFlag.json
      * @param countriesCodeMap key value pairs of Full Country Names & Country Codes

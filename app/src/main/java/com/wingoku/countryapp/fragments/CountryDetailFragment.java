@@ -108,9 +108,10 @@ public class CountryDetailFragment extends Fragment{
     }
 
     /**
+     * This method returns a list of specific details about the user selected country. This List will be then assigned to RecyclerView adapter to display info
      *
      * @param country Country Object containing all the details about the user selected country
-     * @return This method returns a list of specific details about the user selected country. This List will be then assigned to RecyclerView adapter to display info
+     * @return List containing CountryDetails
      */
     private List<HashMap<String, Object>> generateDataList(Country country) {
         String callCode = "";

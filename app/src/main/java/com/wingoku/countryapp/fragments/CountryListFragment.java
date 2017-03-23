@@ -77,6 +77,7 @@ public class CountryListFragment extends Fragment {
     }
 
     /**
+     * Call this when RecyclerView cells/card is clicked
      *
      * @param countryName name of the country upon the user tapped. This method is called by EventBus that delegated the click event from {@link CountriesListRecyclerViewAdapter}
      *                    This event will be further relayed to {@link com.wingoku.countryapp.MainActivity#clickedCountryInfo(String)}

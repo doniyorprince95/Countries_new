@@ -54,12 +54,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Open a fragment
      *
      * @param frag Fragment to open
      * @param isReplaced should this fragment replace current visible fragment
      * @param isAdded should this fragment be added on top of current fragment
      * @param addToBackStack should this fragment be added to backstack for removal upon onBackPressed
      * @param setEnterAnimation should this fragment be animated when replaced/added in the fragment container
+     *
+     *
      */
     private void openFragment(Fragment frag, boolean isReplaced, boolean isAdded, boolean addToBackStack, boolean setEnterAnimation) {
         FragmentTransaction fTranscation = mFManager.beginTransaction();
@@ -81,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method will fetch details for a country based on the country's name from Restful Country server on background thread
      *
      * @param countryName Name of the country for which the information is to be fetched from server
      *                    This method fetches country data on background thread. Country Detail fragment will
@@ -123,9 +127,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Set the country object that will be created into a parcelable in order to be sent as an argument to {@link CountryDetailFragment}
      *
      * @param country this object contains all the information about the country that the user tapped on.
      *                This method will open {@link CountryDetailFragment} to display further details about the user selected country
+     *
+     * @return Returns {@link CountryDetailFragment} object with {@link Country} set in arguments
      */
     private CountryDetailFragment setCountryDetailFragmentBundle(Country country) {
         // ensuring the Name of the country in /assets/cuontriesFlag.json file is the one in the COuntry object too. If the name
@@ -150,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Set the name of the country that user clicked on. This method will in turn call {@link MainActivity#fetchCountryInfoByName(String)}
+     * to fetch the details of the country
      *
      * @param countryName name of the country on which the user has tapped.
      *                    This method is called from the {@link CountryListFragment} when the user touches on a card.
@@ -162,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method will return Espresso IdlingResource for aiding sync between RetroFit's custom background threads & Espresso
      *
      * @return MainActvity's idling resource for Espresso testing
      */

@@ -21,11 +21,18 @@ public interface RestCountriesAPI {
 
     String BASE_URL = "https://restcountries.eu/rest/v2/";
 
-    // getting list of country names and capitals to be shown in the list
+    /** Get list of country names and capitals to be shown in the list
+     *
+     * @return Retrofit Call object to be used in callback
+     */
     @GET("all?fields=name;capital")
     Call<List<Country>> getListOfCountriesInTheWorld();
 
-    // to get info of a specific country, mentioned country name in "countryName"
+    /** Get info of a specific country, mentioned country name in "countryName"
+     *
+     * @param countryName name of the country to fetch details
+     * @return Retrofit Call object to be used in callback
+     */
     @GET("name/{countryName}")
     Call<List<Country>> getCountryByName(@Path("countryName") String countryName);
 
@@ -33,6 +40,7 @@ public interface RestCountriesAPI {
         private static RestCountriesAPI restCountriesAPI;
 
         /**
+         * Get Retrofit instance
          *
          * @return Returns RetroFit instance for Network Calls
          */

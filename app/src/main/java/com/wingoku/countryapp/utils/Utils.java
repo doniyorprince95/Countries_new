@@ -26,6 +26,7 @@ public class Utils {
     private static CountriesCode mCountriesCode = null;
 
     /**
+     * Get parsed Country List from countriesFlag.json file
      *
      * @param con Activity/Application context
      * @return returns @{@link CountriesCode} object that contains the KeyValue pairs of CountryFullName:CountryCode
@@ -41,6 +42,8 @@ public class Utils {
     }
 
     /**
+     * Read & parse the Country List from countriesFlag.json file. This file contains list of the countries flag images
+     * that are inside flags & flagHighRes directory under assets
      *
      * @param con Activity/Application context
      * @param fileName name of the files to be read
@@ -64,6 +67,7 @@ public class Utils {
     }
 
     /**
+     * This method will display a ProgressDialog on the fragment/Activity whose referenece is passed as Context argument
      *
      * @param con Activity/Application context
      * @param title Title to be displayed in Progress Dialog Title area
@@ -88,6 +92,7 @@ public class Utils {
     }
 
     /**
+     * This method will return a Snackbar object
      *
      * @param con Activity/Application context
      * @param view View with which {@link Snackbar} will be attached

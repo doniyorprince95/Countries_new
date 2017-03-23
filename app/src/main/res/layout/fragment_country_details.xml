@@ -45,7 +45,11 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <!-- RECYCLER VIEW FOR DISPLAYING COUNTRIES CARD GRID-->
+    <!-- RECYCLER VIEW FOR DISPLAYING COUNTRy DETAILS GRID-->
+    <!-- USING RECYCLER VIEW SO THAT WE CAN LATER ON ADD FURTHER
+         DETAILS PROVIDED BY RESTFUL COUNTRY API WITHOUT
+         RE-WRITING UI WHICH WOULD HAVE BEEN THE CASE IF WE
+         HAD CREATED N HARDCODED VIEWS FOR THE COUNTRY DETAILS-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_country_details"
         android:layout_width="match_parent"
